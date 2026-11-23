@@ -1,0 +1,773 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 960px;
+  margin: 0 auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f3f5f7;
+  color: #1d2430;
+  line-height: 1.6;
+}
+
+p,
+li,
+a {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+header {
+  background: linear-gradient(135deg, #1d4d7a, #12365d);
+  color: #edf4ff;
+  border-radius: 0;
+  padding: 2rem 1.5rem 1.25rem;
+  box-shadow: none;
+}
+
+h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  margin: 0 0 0.35rem;
+  font-size: 2.6rem;
+}
+
+.tagline {
+  margin: 0;
+  color: #e7f0ff;
+  font-style: italic;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+header .primary-nav {
+  margin-bottom: 0.5rem;
+  justify-content: center;
+}
+
+header .secondary-nav {
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+  opacity: 0.95;
+  justify-content: center;
+}
+
+header .nav-link {
+  padding: 0.45rem 0.65rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+header .secondary-nav .nav-link {
+  background: #edf5ff;
+  border: 2px solid #d9e1ea;
+  color: #2d2d2d;
+  padding: 0.4rem 0.6rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+header .secondary-nav .nav-link:visited {
+  color: #2d2d2d;
+}
+
+@media (max-width: 700px) {
+  header .primary-nav,
+  header .secondary-nav {
+    justify-content: center;
+  }
+  header .secondary-nav .nav-link {
+    font-size: 0.95rem;
+  }
+}
+
+.nav-link,
+.home-link {
+  color: #2d2d2d;
+  background: #edf5ff;
+  border: 2px solid #1d4d7a;
+  border-radius: 0;
+  padding: 0.6rem 0.9rem;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.nav-link:visited,
+.home-link:visited {
+  color: #2d2d2d;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.home-link:hover,
+.home-link:focus {
+  color: #111111;
+  background: #dfeeff;
+}
+
+main {
+  margin-top: 1.75rem;
+}
+
+.theme-panel,
+.doc-layout,
+.product-hero,
+.feature-grid,
+
+h3,
+h4 {
+  margin-top: 0;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.field-row {
+  display: block;
+}
+
+label,
+legend {
+  font-weight: 600;
+  color: #1d2430;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+  padding: 0.75rem 0.9rem;
+  border: 2px solid #d9e1ea;
+  background: #f9fbfd;
+  color: #1d2430;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.field-group {
+  border: 2px solid #d9e1ea;
+  padding: 1rem;
+  background: #f9fbfd;
+  margin-bottom: 1rem;
+}
+
+.button-row {
+  display: flex;
+  justify-content: flex-start;
+}
+
+button,
+.primary-button,
+.secondary-button {
+  display: inline-block;
+  text-decoration: none;
+  background: #1d4d7a;
+  color: #fffffa;
+  border: 2px solid #12365d;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover,
+.primary-button:hover,
+.secondary-button:hover {
+  background: #12365d;
+}
+
+.secondary-button {
+  background: transparent;
+  color: #1d2430;
+}
+
+.card-deck {
+  display: block;
+}
+
+.playing-card {
+  background: linear-gradient(180deg, #ffffff, #edf5ff);
+  border: 2px solid #d9e1ea;
+  padding: 1rem;
+  min-height: 180px;
+  margin-bottom: 1rem;
+}
+
+.playing-card img {
+  display: block;
+  max-width: 420px;
+  width: auto;
+  height: auto;
+  margin: 0 auto 1rem;
+  border: 2px solid #d9e1ea;
+}
+
+.card-suit {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  color: #4d5c6b;
+  margin: 0;
+}
+
+.card-forest {
+  border-top: 6px solid #3d7d62;
+}
+.card-river {
+  border-top: 6px solid #3d6ea8;
+}
+.card-meadow {
+  border-top: 6px solid #c28f3b;
+}
+.card-campfire {
+  border-top: 6px solid #b75f45;
+}
+
+.inventory-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #f9fbfd;
+}
+
+.inventory-table th,
+.inventory-table td {
+  border: 1px solid #d9e1ea;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.doc-layout {
+  display: block;
+}
+
+.docs-nav {
+  margin-bottom: 1rem;
+}
+
+.docs-nav a {
+  background: #edf5ff;
+  border: 2px solid #d9e1ea;
+  color: #1d2430;
+  text-decoration: none;
+  padding: 0.7rem 0.9rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.doc-article {
+  border-left: 4px solid #1d4d7a;
+  background: #f9fbfd;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.product-hero {
+  display: block;
+}
+
+.eyebrow,
+.mini-label {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  color: #4d5c6b;
+  font-weight: 700;
+  margin: 0;
+}
+
+.product-highlight {
+  background: #edf5ff;
+  border: 2px solid #d9e1ea;
+  padding: 1.25rem;
+  margin-top: 1rem;
+}
+
+.price-tag,
+.fee {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #12365d;
+  margin: 0;
+}
+
+
+
+.price-card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.standout {
+  border-color: #1d4d7a;
+  background: #edf5ff;
+}
+
+.joke-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.card {
+  background: #fdfdff;
+  border: 2px solid #d9e1ea;
+  border-radius: 0;
+  padding: 1.5rem;
+}
+
+.certification-joke-card {
+  max-width: 650px;
+  text-align: center;
+}
+
+.certification-joke-card img {
+  display: block;
+  max-width: 500px;
+  width: auto;
+  height: auto;
+  margin: 0 auto 1.5rem;
+  border-radius: 12px;
+}
+
+.days-counter {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1d3557;
+  margin: 0;
+}
+
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  margin-top: 0;
+  color: #12365d;
+}
+
+h6.display-name,
+.display-name {
+  margin: 0 auto 1rem;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #12365d;
+  white-space: nowrap;
+  line-height: 1.2;
+  text-align: center;
+  display: block;
+}
+
+.links-line,
+.certified-line {
+  text-align: center;
+}
+
+figure {
+  margin: 0 0 1rem;
+  text-align: center;
+}
+
+.intro-figure {
+  max-width: 240px;
+  margin: 0 auto 1.5rem;
+}
+
+blockquote {
+  margin: 1.25rem 0;
+  padding: 0.75rem 1rem;
+  border-left: 4px solid #1d4d7a;
+  background: #edf5ff;
+  color: #1d2430;
+}
+
+/* Style for contract link within courses list to blend seamlessly with surrounding text */
+ol li strong a,
+ol li strong a:visited,
+ol li strong a:hover,
+ol li strong a:focus {
+  color: inherit;
+  text-decoration: none;
+  cursor: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0;
+}
+
+footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 2px solid #d9e1ea;
+  color: #4d5c6b;
+  font-size: 0.95rem;
+}
+
+/* Styling for Everything Pictures / Images assignment page:
+   Classes are used to present image manipulation tests and comparisons in a clean,
+   accessible layout while preserving CRAP principles. */
+
+/* hr separator between image sections */
+hr {
+  border: 0;
+  height: 2px;
+  background: #d9e1ea;
+  margin: 2.5rem 0;
+}
+
+/* Container article for each image manipulation task */
+.image-experiment-article {
+  background: #fdfdff;
+  border: 2px solid #d9e1ea;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Navigation bar displaying the 4 format links side by side */
+.image-links-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1.25rem 0;
+}
+
+/* Button-styled link for image format alternatives */
+.image-format-link {
+  display: inline-block;
+  padding: 0.5rem 0.85rem;
+  background: #edf5ff;
+  border: 2px solid #1d4d7a;
+  color: #2d2d2d;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.image-format-link:visited {
+  color: #2d2d2d;
+}
+
+.image-format-link:hover,
+.image-format-link:focus {
+  background: #dfeeff;
+  color: #111111;
+}
+
+/* Flex row for displaying multiple distorted or enlarged images side by side */
+.gallery-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin: 1.25rem 0;
+}
+
+/* Individual figure wrapper in comparison galleries */
+.gallery-item {
+  flex: 1 1 200px;
+  max-width: 320px;
+  margin: 0.5rem 0;
+  text-align: center;
+  background: #fdfdff;
+  border: 1px solid #d9e1ea;
+  padding: 0.75rem;
+}
+
+.gallery-item figcaption {
+  font-size: 0.88rem;
+  color: #334155;
+  margin-top: 0.65rem;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+/* Classes for side-by-side improper enlargement comparison to keep inline styles <= 2 */
+.compare-enlarged-pexels {
+  width: 320px;
+  height: 240px;
+  max-width: 100%;
+}
+
+.compare-enlarged-padlock {
+  width: 240px;
+  height: 320px;
+  max-width: 100%;
+}
+
+/* Utility class to hide containers during form submission and toggle states */
+.hidden {
+  display: none;
+}
+
+#form label,
+#intro-form label {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+#form input,
+#form textarea,
+#intro-form input,
+#intro-form textarea {
+  width: 100%;
+  margin-top: 0.25rem;
+}
+
+.field-help-text {
+  font-size: 0.9rem;
+  color: #4d5c6b;
+  margin-bottom: 0.75rem;
+}
+
+/* Dynamic course fields container and card rows */
+.courses-container {
+  margin-bottom: 1rem;
+}
+
+.course-item-card {
+  background: #fdfdff;
+  border: 1px solid #d9e1ea;
+  padding: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.delete-course-btn {
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  background: #b75f45;
+  border: 1px solid #8e3f28;
+  color: #fffffa;
+  cursor: pointer;
+}
+
+.delete-course-btn:hover {
+  background: #8e3f28;
+}
+
+.add-course-btn {
+  margin-bottom: 0.5rem;
+}
+
+/* Control buttons row grouping Submit, Reset, and Clear actions */
+.form-actions-row {
+  margin-top: 1.5rem;
+}
+
+.form-actions-row button {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Form validation error feedback banner */
+.form-error {
+  color: #b75f45;
+  font-weight: 700;
+  padding: 0.5rem 0.75rem;
+  border-left: 4px solid #b75f45;
+  background: #fdf5f3;
+  margin-bottom: 1rem;
+}
+
+/* Code output container for generated HTML, JSON, and XML inspection */
+.code-output-card {
+  background: #fdfdff;
+  border: 2px solid #d9e1ea;
+  padding: 1rem;
+  margin-top: 1.5rem;
+}
+
+.code-output-header {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.code-output-card pre {
+  background: #edf5ff;
+  border: 1px solid #d9e1ea;
+  padding: 0.75rem;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Peer Introductions Directory styles:
+   Classes provide a structured, accessible presentation for classmate introduction cards,
+   search filter controls, and live API status notifications. */
+
+/* Status banner for live fetch progress and API state */
+.status-banner {
+  padding: 0.65rem 1rem;
+  background: #edf5ff;
+  border-left: 4px solid #1d4d7a;
+  color: #1d2430;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.status-success {
+  background: #f0f7f3;
+  border-left-color: #2b7a4b;
+  color: #1b4d2e;
+}
+
+.status-warning {
+  background: #fdf8ed;
+  border-left-color: #b87a28;
+  color: #634310;
+}
+
+/* Row displaying live submission counts and active filters */
+.stats-row {
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Badge pills for count statistics */
+.badge {
+  display: inline-block;
+  padding: 0.35rem 0.65rem;
+  background: #edf5ff;
+  border: 1px solid #d9e1ea;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #1d4d7a;
+  margin-right: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+
+/* Gold badge highlighting the most recent classmate submission */
+.badge-spotlight {
+  background: #fdf8ed;
+  border: 1px solid #d4a017;
+  color: #7a5800;
+  margin-bottom: 0.5rem;
+}
+
+/* Callout text in the spotlight banner */
+.spotlight-highlight-text {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #1d2430;
+}
+
+/* Jump link to navigate directly to the spotlighted card */
+.spotlight-jump-link {
+  font-weight: 700;
+  color: #1d4d7a;
+  margin-left: 0.35rem;
+}
+
+/* Container box grouping search input and clear button */
+.search-controls-box {
+  display: block;
+}
+
+.search-controls-box input[type="text"] {
+  margin-top: 0.35rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Container holding all rendered classmate introduction articles */
+.peer-cards-container {
+  display: block;
+  margin-top: 1rem;
+}
+
+/* Article card presenting a classmate's introduction record */
+.peer-card {
+  background: #f9fbfd;
+  border: 2px solid #d9e1ea;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Title for classmate card */
+.peer-title {
+  color: #1d4d7a;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #d9e1ea;
+  padding-bottom: 0.35rem;
+}
+
+/* Figure centering classmate photo and caption within card */
+.peer-figure {
+  text-align: center;
+  margin: 1rem auto;
+  max-width: 200px;
+}
+
+.peer-figure img {
+  object-fit: cover;
+  background: #edf5ff;
+}
+
+/* Personal statement text block */
+.peer-statement {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-style: normal;
+}
+
+/* Container for classmate current course list */
+.peer-courses-box {
+  margin: 0.75rem 0;
+  padding: 0.5rem 0.75rem;
+  background: #edf5ff;
+  border-left: 3px solid #1d4d7a;
+}
+
+.peer-courses-box ul {
+  margin: 0.25rem 0 0.25rem 1.25rem;
+  padding: 0;
+}
+
+/* Attribution styling for favorite quote */
+.peer-quote-author {
+  font-style: italic;
+  margin-top: -0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Social and professional profile links inside card */
+.peer-links-line {
+  margin: 0.75rem 0;
+  font-size: 0.9rem;
+}
+
+/* Timestamp showing when record was last updated */
+.peer-timestamp {
+  color: #5c6b79;
+  border-top: 1px solid #e5edf5;
+  padding-top: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+/* Message shown when search filter yields no matching results */
+.no-results-msg {
+  padding: 1rem;
+  background: #fdf5f3;
+  border: 1px solid #e8c4be;
+  color: #b75f45;
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .page {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
